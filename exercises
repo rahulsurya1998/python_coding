@@ -1,0 +1,151 @@
+# This program prints Hello, world!
+print("Hello World!")
+
+
+# This program adds two numbers
+a=9
+b=8
+sum=a+b
+print(sum)
+a1,b1= map(float, input("Enter two values: ").split())
+sum1=a1+b1
+print(sum1)
+
+
+
+# Python Program to calculate the square root
+a=7
+print(round((a**0.5),3))
+# Find square root of real or complex numbers
+# Importing the complex math module
+import cmath
+x=eval(input("Enter a complex number:"))
+print((x))
+num_sqrt= cmath.sqrt(x)
+print(num_sqrt)
+print("The square root of {0} is {1:0.3f}+{2:0.3f}j".format(x,num_sqrt.real,num_sqrt.imag))
+
+
+# Python Program to find the area of triangle
+a,b,c=[4,4,1]
+# calculate the semi-perimeter
+s=(a+b+c)/2
+area= (s*(s-a)*(s-b)*(s-c))**0.5
+print("Area of triangle is %0.1f" %area)
+
+
+# Solve the quadratic equation ax**2 + bx + c = 0
+a = 1
+b = 5
+c = 6
+import math
+part1=-b
+part2= math.sqrt((b**2)-4*a*c)
+part3= 2*a
+x1= (part1+part2)/part3
+x2= (part1-part2)/part3
+print("The solutions of the equation are {} and {}".format(x1,x2))
+
+
+
+# Python program to swap two variables
+a=5
+b=7
+temp=a
+a=b
+b=temp
+print(a,b)
+#or
+a,b=b,a
+print(a,b)
+
+
+
+# Python Program to convert temperature in celsius to fahrenheit
+celcius=37.5
+fahrenheit= celcius*1.8+32
+print(fahrenheit)
+
+
+
+
+#check whether a number entered by the user is positive, negative or zero. 
+a=float(input("Enter a number:"))
+if a>0:
+    print("Possitive")
+elif a<0:
+    print("Negative")
+elif a==0:
+    print("Zero")
+    
+    
+#check whether a number entered by the user is even or odd.
+a=int(input())
+if a%2==0:
+    print("Even")
+else:
+    print("Odd")
+    
+    
+    
+# check whether a year is leap year or not
+a=int(input("Enter a year:"))
+if a%4==0:
+    if a%100==0:
+        if a%400==0:
+            print("Leap Year")
+        else:
+            print("Not a Leap year")
+    else:
+        print("Leap Year")
+else:
+    print("Leap Year")
+    
+    
+    
+    
+    
+#find the largest among three numbers 
+a,b,c= map(int,input("Enter three numbers:").split())
+print(max(a,b,c))
+#or
+a1,b1,c1= map(int,input("Enter three numbers:").split())
+if a1>b1 and a1>c1:
+    print(a1)
+elif b1>a1 and b1>c1:
+    print(b1)
+else:
+    print(c1)
+    
+    
+    
+    
+# check whether an integer is a prime number 
+a=int(input("Enter a number:"))
+count=0
+for i in range(1,a+1):
+    if a%i==0:
+        count=count+1
+if count==2:
+    print("Prime")
+else:
+    print("Not a Prime")
+    
+    
+    
+    
+#print all prime numbers within an interval
+# check whether an integer is a prime number 
+a=int(input("Enter a number:"))
+b=int(input("Enter a number:"))
+count=0
+for i in range(a,b+1):
+    for j in range(1,i+1):
+        if i%j==0:
+            count=count+1
+    if count==2:
+        print(i)
+        count=0
+    else:
+        count=0
+        continue
