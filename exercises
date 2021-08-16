@@ -149,3 +149,100 @@ for i in range(a,b+1):
     else:
         count=0
         continue
+        
+        
+        
+#Python Program to Find the Factorial of a Number
+import math
+a=int(input("Enter:"))
+print(math.factorial(a))
+or
+prod=1
+for i in range(1,a+1):
+    prod=prod*i
+print(prod)    
+
+#Python Program to Display the multiplication Table
+a=int(input("Enter:"))
+for i in range(1,11):
+    print(a,"x",i,"=",a*i)
+    
+    
+# Python Program to Print the Fibonacci sequence
+a=int(input("Enter:"))
+x={1:0,2:1}
+for i in range(1,a+1):
+    if i>2:
+       b,c=i-1,i-2
+       d=x[b]+x[c]
+       x[i]=d
+       print(x[i])
+    else:
+        print(x[i])
+      
+      
+# Python Program to Check Armstrong Number
+a=input("Enter:")
+b=len(a)
+
+c=list(map(int,a))
+
+sum=0
+prod=1
+for i in c:
+    for j in range(b):
+        prod=prod*i
+    
+    sum=prod+sum
+    
+    prod=1
+
+if sum==int(a):
+    print("Armstrong Number")
+else:
+    print("No")
+    
+    
+# Python Program to Find Armstrong Number in an Interval
+# Python Program to Check Armstrong Number
+x=100
+y=2000
+for a in range(x,y+1):
+    b=len(str(a))
+
+    c=list(map(int,str(a)))
+
+    sum=0
+    prod=1
+    for i in c:
+       for j in range(b):
+          prod=prod*i
+    
+       sum=prod+sum
+    
+       prod=1
+
+    if sum==(a):
+       print(a, "Armstrong Number")
+       
+       
+       
+       
+ # Python Program to Find the Sum of Natural Numbers
+
+a=int(input("Enter:"))
+
+newlist = [x for x in range(1,a+1)]
+
+print(sum(newlist))
+
+
+#Python Program to Display Powers of 2 Using Anonymous Function
+terms=10
+x=list(map(lambda n:2**n, range(terms)))
+for i in range(terms):
+    print("2 raised to the power {0} is {1}".format(i,x[i]))
+
+
+
+
